@@ -1,63 +1,98 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('/img/3258171.jpg');
+    font-family: "Montserrat", sans-serif;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    background-image: url('/img/6412173.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover;
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    background:#130d59;
-
+    margin-right: 20px;
 }
 
 #logo{
-    height: 100px;
+    max-width: 150px;
     width: auto;
     
 }
-#logo:hover{
-    transform: rotate(2deg);
-}
 
-nav{
+header > nav{
     display: flex;
-    justify-content: space-evenly;
-    margin-top: auto;
-    margin-bottom: auto;
+    gap: 20px;
+    width: auto;
+    flex-wrap: nowrap;
+    text-align: center;
+
 } 
 
 nav > a{
     display: flex;
-    justify-content: center;
     align-items: center;
     text-decoration: none;
-    background: linear-gradient(to top, #130d59,#061a2d);
-    border-radius: 6px;
-    height: 40px;
-    width: 100px;
+    max-height: 40px;
+    max-width: 100px;
+    font-family: "DM Mono", monospace;
     color: white;
     margin: 10px; 
 }
 
 nav > a:hover{
-    color: yellow;
-    border: 0.1px solid #061a2d;
+    color: orange;
+    text-decoration:underline;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+}
+
+.intro > h1{
+    text-align: center;
+    font-size: 50px;
+    background: linear-gradient(to top,#4422aa,#061a2d);
+    text-shadow: 1px 1px 3px  #061a2d;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.intro > h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    background: linear-gradient(to top,#4422aa,#061a2d);
+    text-shadow: 1px 1px 3px  #061a2d;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
-@media(max-width:768px){
-    nav > a{
-      display: none;
-    }
+
+.intro > p{
+    font-family: "DM Mono", monospace;
+    margin-top: 0;
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 .sec1{
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
 }
 
 .sobre{
@@ -66,8 +101,10 @@ nav > a:hover{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    background: #130d59;
+    padding: 10px;
     width: 80%;
+    font-family: "DM Mono", monospace;
     flex-wrap: wrap;
 }
 
@@ -75,15 +112,22 @@ nav > a:hover{
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    height: 400px;
+    height: 200px;
+    width: auto;
     margin-bottom: 70px;
 }
 
-section > h2{
+.sec1 > h2{
     text-align: center;
     font-size: 30px;
     margin-top: 40px;
-    color: yellow;
+    color: white;
+}
+
+.descrition{
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem ;
 }
 
 .descrition > p {
@@ -91,80 +135,76 @@ section > h2{
     margin-left: 30px;
     margin-right: 30px;
     max-width: 35rem;
-    text-shadow: 1px 1px black;
+}
+
+.descrition > .mais , .menos{
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+
 }
 
 main{
     display: flex;
     flex-direction: column;
-    
+    background:#130d59;
 }
+
 main > h1{
     margin-top: 40px;
+    margin-bottom: 50px;
     text-align: center;
     color: white;
 }
-
 
 .tecno1{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-evenly;;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-    min-height: 25rem;
+    min-height: 20rem;
 }
 
-#img1 , #img2 , #img3 , #img4{
-    height: 9rem;
-    width: 9rem;
-    margin: 20px;
-    cursor: pointer;
+
+.tec > .btn{
+    text-align: center;
+    border: 2px solid orange;
+    border-radius: 16px;
+    width: 180px;
+    height: 50px;
+    color: orange;
+    size: 24px;
 }
 
-.imagem{
+.tec > p{
     display: flex;
-    flex-direction: column;
-}
-
-.imagem > span{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 6rem;
-    font-size: 20px;
-    color: white;
-}
-
-.imagem > p{
-    position: absolute;
-    display: none;
-    text-align: center;
-    background: black;
+    align-items: center;
     color: white;
     padding: 5px;
     border-radius: 6px;
-    width: 180px;
+    width: 175px;
 }
 
 .project{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-image: url('/img/6412173.jpg');
 }
+
 .pj{
     display: block;
     margin-bottom: 40px;
     margin-top: 40px;
     text-align: center;
 }
+
 .pj > img{
     background-color:#130d59;
     height: 200px;
     width: 200px;
     border-radius: 6px;
 }
+
 .pj > button{
     display: flex;
     justify-content: center;
@@ -181,10 +221,28 @@ main > h1{
 footer{
     display: flex;
     flex-direction: column;
-    height: 200px;
-    background-color: #061a2d;
+    height: 100hv;
+    background: #605EA1;
     color: white;
 }
+
 footer > p{
     text-align: center;
+}
+
+.social{
+    display: inline-block;
+    text-align: center;
+}
+
+.social > a >img{
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.copy-info{
+    text-align: center;
+    margin-top: auto;
 }
