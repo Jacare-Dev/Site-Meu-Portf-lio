@@ -1,2 +1,2 @@
 # Site-Meu-Portf-lio
-Esse é meu site online do meu portfólio para me conhecerem e sobre meu trabalho.
+Essa é minha landing page do meu portfólio com o intuito de me apresentar.
